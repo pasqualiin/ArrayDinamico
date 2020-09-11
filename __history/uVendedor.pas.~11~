@@ -1,0 +1,25 @@
+unit uVendedor;
+
+interface
+
+uses uFuncionario;
+
+type
+
+  TVendedor = class(TFuncionario)
+
+  public
+    function CalculaComissaoSalario(salario: currency): currency;
+
+  end;
+
+implementation
+
+{ TVendedor }
+
+function TVendedor.CalculaComissaoSalario(salario: currency): currency;
+begin
+  Result := (salario * 1.15);
+end;
+
+end.

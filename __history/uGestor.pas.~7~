@@ -1,0 +1,31 @@
+unit uGestor;
+
+interface
+
+uses uFuncionario;
+
+type
+
+  TGestor = class(TFuncionario)
+
+  private
+    FHoraExtra: currency;
+
+  public
+    property horaExtra: currency read getHoraExtra write setHoraExtra;
+    function CalculaHoraExtra: currency;
+
+  end;
+
+implementation
+
+{ TVendedor }
+
+{ TGestor }
+
+function TGestor.CalculaHoraExtra: currency;
+begin
+  Result := salario +
+end;
+
+end.

@@ -1,0 +1,27 @@
+unit uGestor;
+
+interface
+
+uses uFuncionario;
+
+type
+
+  TGestor = class(TFuncionario)
+
+  public
+    function CalculaHoraExtra: currency;
+
+  end;
+
+implementation
+
+{ TVendedor }
+
+{ TGestor }
+
+function TGestor.CalculaHoraExtra: currency;
+begin
+  Result := salario
+end;
+
+end.

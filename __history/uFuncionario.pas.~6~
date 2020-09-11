@@ -1,0 +1,33 @@
+unit uFuncionario;
+
+interface
+
+type
+
+  TFuncionario = class
+  private
+    FNome: string;
+    FCPF: string;
+    FSalario: currency;
+    function getNome: string;
+    procedure setNome(Value: String);
+  public
+    property nome: string read getNome write setNome;
+
+  end;
+
+implementation
+
+{ TFuncionario }
+
+function TFuncionario.getNome: string;
+begin
+  Result := FNome;
+end;
+
+procedure TFuncionario.setNome(Value: String);
+begin
+
+end;
+
+end.
