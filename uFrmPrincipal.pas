@@ -46,7 +46,6 @@ begin
     Funcionario := TFuncionario.Create;
     Vendedor := TVendedor.Create;
     Gestor := TGestor.Create;
-    VetorFunc := Funcionario.Create;
 
     if CbCargo.ItemIndex = 0 then
     begin
@@ -61,7 +60,8 @@ begin
 
       VetorFunc[tamanho - 1] := Vendedor;
 
-      MCadastro.Lines.Add(VetorFunc[tamanho].nome);
+      MCadastro.Lines.Add('O Funcionário : ' + Vendedor.nome +
+        ' foi cadastrado!');
 
     end
     else
@@ -78,9 +78,6 @@ begin
       VetorFunc[tamanho - 1] := Gestor;
     end;
   finally
-    Funcionario.Free;
-    Gestor.Free;
-    Vendedor.Free;
   end;
 end;
 
@@ -105,19 +102,13 @@ begin
   for i := 0 to tamanho - 1 do
   begin
     Funcionario := VetorFunc[i];
-    nRegistro := nRegistro + 1;
 
-    MCadastro.Lines.Add(Funcionario.nome);
-    MCadastro.Lines.Add(Funcionario.cpf);
+    MCadastro.Lines.Add('Nome: ' + Funcionario.nome + #13#10 + 'CPF: ' +
+      Funcionario.cpf + #13#10 + 'Salário R$ ' +
+      CurrToStr(Funcionario.salario));
 
   end;
 
-  { MCadastro.Lines.Add(Gestor.nome + #13#10 + Gestor.cpf + #13#10 +
-    CurrToStr(Gestor.salario) + #13#10 + CurrToStr(Gestor.CalculaHoraExtra));
-
-    MCadastro.Lines.Add(Vendedor.nome + #13#10 + Vendedor.cpf + #13#10 +
-    CurrToStr(Vendedor.salario) + #13#10 +
-    CurrToStr(Vendedor.CalculaComissaoSalario)); }
 end;
 
 end.

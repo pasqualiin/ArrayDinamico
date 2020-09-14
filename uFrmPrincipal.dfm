@@ -2,8 +2,8 @@ object FormPrincipal: TFormPrincipal
   Left = 0
   Top = 0
   Caption = 'FormPrincipal'
-  ClientHeight = 349
-  ClientWidth = 467
+  ClientHeight = 348
+  ClientWidth = 459
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -58,13 +58,15 @@ object FormPrincipal: TFormPrincipal
   end
   object MCadastro: TMemo
     Left = 0
-    Top = 224
-    Width = 467
+    Top = 223
+    Width = 459
     Height = 125
     Align = alBottom
     Lines.Strings = (
       '')
     TabOrder = 5
+    ExplicitTop = 224
+    ExplicitWidth = 467
   end
   object btnCadastrar: TButton
     Left = 32
